@@ -1,0 +1,6 @@
+framework module Pods_Newen {
+  umbrella header "Pods-Newen-umbrella.h"
+
+  export *
+  module * { export * }
+}

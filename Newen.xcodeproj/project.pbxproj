@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		188AEC201F0FC71E006BB41E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188AEC1F1F0FC71E006BB41E /* AppDelegate.swift */; };
-		188AEC221F0FC71E006BB41E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188AEC211F0FC71E006BB41E /* ViewController.swift */; };
 		188AEC251F0FC71E006BB41E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188AEC231F0FC71E006BB41E /* Main.storyboard */; };
 		188AEC281F0FC71E006BB41E /* Newen.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 188AEC261F0FC71E006BB41E /* Newen.xcdatamodeld */; };
 		188AEC2A1F0FC71E006BB41E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188AEC291F0FC71E006BB41E /* Assets.xcassets */; };
 		188AEC2D1F0FC71E006BB41E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188AEC2B1F0FC71E006BB41E /* LaunchScreen.storyboard */; };
+		18BAC8BF1F10314500BD3BC7 /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BAC8BE1F10314500BD3BC7 /* NewsData.swift */; };
+		18BAC8C11F10319100BD3BC7 /* NewsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BAC8C01F10319100BD3BC7 /* NewsLoader.swift */; };
+		18BAC8C31F1031C600BD3BC7 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BAC8C21F1031C600BD3BC7 /* NewsTableViewController.swift */; };
+		239C812F1F2CE8760A7EACFE /* Pods_Newen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD76423E6CFBB406C7CF6EA4 /* Pods_Newen.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		188AEC1C1F0FC71E006BB41E /* Newen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188AEC1F1F0FC71E006BB41E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		188AEC211F0FC71E006BB41E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		188AEC241F0FC71E006BB41E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		188AEC271F0FC71E006BB41E /* Newen.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Newen.xcdatamodel; sourceTree = "<group>"; };
 		188AEC291F0FC71E006BB41E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		188AEC2C1F0FC71E006BB41E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		188AEC2E1F0FC71E006BB41E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18BAC8BE1F10314500BD3BC7 /* NewsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
+		18BAC8C01F10319100BD3BC7 /* NewsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsLoader.swift; sourceTree = "<group>"; };
+		18BAC8C21F1031C600BD3BC7 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		5033AC040EDD6ECEB549C46A /* Pods-Newen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newen.release.xcconfig"; path = "Pods/Target Support Files/Pods-Newen/Pods-Newen.release.xcconfig"; sourceTree = "<group>"; };
+		7127C37192E13C8A75D3F0C1 /* Pods-Newen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Newen/Pods-Newen.debug.xcconfig"; sourceTree = "<group>"; };
+		FD76423E6CFBB406C7CF6EA4 /* Pods_Newen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Newen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				239C812F1F2CE8760A7EACFE /* Pods_Newen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,8 @@
 			children = (
 				188AEC1E1F0FC71E006BB41E /* Newen */,
 				188AEC1D1F0FC71E006BB41E /* Products */,
+				D3FDFCBA24F0B5F35629CA16 /* Pods */,
+				FFDC74D211D8AF302C8056F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,7 +68,9 @@
 			isa = PBXGroup;
 			children = (
 				188AEC1F1F0FC71E006BB41E /* AppDelegate.swift */,
-				188AEC211F0FC71E006BB41E /* ViewController.swift */,
+				18BAC8BE1F10314500BD3BC7 /* NewsData.swift */,
+				18BAC8C01F10319100BD3BC7 /* NewsLoader.swift */,
+				18BAC8C21F1031C600BD3BC7 /* NewsTableViewController.swift */,
 				188AEC231F0FC71E006BB41E /* Main.storyboard */,
 				188AEC291F0FC71E006BB41E /* Assets.xcassets */,
 				188AEC2B1F0FC71E006BB41E /* LaunchScreen.storyboard */,
@@ -67,6 +80,23 @@
 			path = Newen;
 			sourceTree = "<group>";
 		};
+		D3FDFCBA24F0B5F35629CA16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7127C37192E13C8A75D3F0C1 /* Pods-Newen.debug.xcconfig */,
+				5033AC040EDD6ECEB549C46A /* Pods-Newen.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FFDC74D211D8AF302C8056F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD76423E6CFBB406C7CF6EA4 /* Pods_Newen.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 188AEC311F0FC71E006BB41E /* Build configuration list for PBXNativeTarget "Newen" */;
 			buildPhases = (
+				C5A6D394C54562A24ACC5BB4 /* [CP] Check Pods Manifest.lock */,
 				188AEC181F0FC71E006BB41E /* Sources */,
 				188AEC191F0FC71E006BB41E /* Frameworks */,
 				188AEC1A1F0FC71E006BB41E /* Resources */,
+				D89527B176AC82B019E653E1 /* [CP] Embed Pods Frameworks */,
+				69A14607200ADE5C524ABE2D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,13 +167,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		69A14607200ADE5C524ABE2D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Newen/Pods-Newen-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5A6D394C54562A24ACC5BB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D89527B176AC82B019E653E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Newen/Pods-Newen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		188AEC181F0FC71E006BB41E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				188AEC221F0FC71E006BB41E /* ViewController.swift in Sources */,
+				18BAC8BF1F10314500BD3BC7 /* NewsData.swift in Sources */,
+				18BAC8C31F1031C600BD3BC7 /* NewsTableViewController.swift in Sources */,
 				188AEC281F0FC71E006BB41E /* Newen.xcdatamodeld in Sources */,
+				18BAC8C11F10319100BD3BC7 /* NewsLoader.swift in Sources */,
 				188AEC201F0FC71E006BB41E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +347,7 @@
 		};
 		188AEC321F0FC71E006BB41E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7127C37192E13C8A75D3F0C1 /* Pods-Newen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Newen/Info.plist;
@@ -276,6 +360,7 @@
 		};
 		188AEC331F0FC71E006BB41E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5033AC040EDD6ECEB549C46A /* Pods-Newen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Newen/Info.plist;
@@ -305,6 +390,7 @@
 				188AEC331F0FC71E006BB41E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
