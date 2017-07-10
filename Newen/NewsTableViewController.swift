@@ -16,7 +16,7 @@ class NewsTableViewController: UITableViewController {
     
     var newsArray = [[String: AnyObject?]]()
     let realm = try! Realm()
-    let newsURL = "https://newsapi.org/v1/articles?/Users/apple/Desktop/LESSONS/Newen/Newen/Info.plistsource=techcrunch&sortBy=latest&apiKey=6b7c247d75914da0b7a53c8bb951c279"
+    let newsURL = "https://newsapi.org/v1/articles?source=techcrunch&sortBy=latest&apiKey=6b7c247d75914da0b7a53c8bb951c279"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class NewsTableViewController: UITableViewController {
             if ((responseData.result.value) != nil) {
                 let swiftyJSONVar = JSON(responseData.result.value!)
                 
-                if let newsData = swiftyJSONVar["articles"][0].arrayObject {
+                if let newsData = swiftyJSONVar["articles"].arrayObject {
                     self.newsArray = newsData as! [[String:AnyObject]]
                 }
                 
@@ -56,7 +56,7 @@ class NewsTableViewController: UITableViewController {
         cell.textLabel?.text = dict["title"] as? String
         cell.detailTextLabel?.text = dict["publishedAt"] as? String
         cell.imageView?.image = dict["urlToImage"] as? UIImage
-
+        
         return cell
     }
 

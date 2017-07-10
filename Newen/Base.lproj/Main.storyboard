@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Last News-->
         <scene sceneID="KlI-nE-1l3">
             <objects>
                 <tableViewController id="zYY-vt-PCh" customClass="NewsTableViewController" customModule="Newen" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,7 +48,7 @@
                             <outlet property="delegate" destination="zYY-vt-PCh" id="L2f-96-gec"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="YTn-ql-slV"/>
+                    <navigationItem key="navigationItem" title="Last News" id="YTn-ql-slV"/>
                     <connections>
                         <outlet property="tblJSON" destination="Ma7-v4-Ort" id="qXO-Kk-ccR"/>
                     </connections>
