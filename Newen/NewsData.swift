@@ -7,3 +7,8 @@
 //
 
 import Foundation
+import RealmSwift
+
+class NewsData: Object {
+    dynamic var article_name: String = ""
+}

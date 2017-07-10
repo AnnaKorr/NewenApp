@@ -7,45 +7,59 @@
 //
 
 import UIKit
+import Alamofire
+import RealmSwift
+import SwiftyJSON
 
 class NewsTableViewController: UITableViewController {
+    @IBOutlet var tblJSON: UITableView!
+    
+    var newsArray = [[String: AnyObject?]]()
+    let realm = try! Realm()
+    let newsURL = "https://newsapi.org/v1/articles?/Users/apple/Desktop/LESSONS/Newen/Newen/Info.plistsource=techcrunch&sortBy=latest&apiKey=6b7c247d75914da0b7a53c8bb951c279"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        Alamofire.request(newsURL).responseJSON { (responseData) -> Void in
+            if ((responseData.result.value) != nil) {
+                let swiftyJSONVar = JSON(responseData.result.value!)
+                
+                if let newsData = swiftyJSONVar["articles"][0].arrayObject {
+                    self.newsArray = newsData as! [[String:AnyObject]]
+                }
+                
+                if self.newsArray.count > 0 {
+                    self.tblJSON.reloadData()
+                }
+            
+                print(Realm.Configuration.defaultConfiguration.fileURL ?? (AnyObject).self)
+        
+        
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.newsArray.count
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cellId")!
+        var dict = self.newsArray[(indexPath as NSIndexPath).row]
+        cell.textLabel?.text = dict["title"] as? String
+        cell.detailTextLabel?.text = dict["publishedAt"] as? String
+        cell.imageView?.image = dict["urlToImage"] as? UIImage
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -92,4 +106,6 @@ class NewsTableViewController: UITableViewController {
     }
     */
 
+        }
+}
 }
