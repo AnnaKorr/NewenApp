@@ -20,7 +20,7 @@ class NewsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-     /*
+     
         Alamofire.request(newsURL).responseJSON { (responseData) -> Void in
             if ((responseData.result.value) != nil) {
                 let swiftyJSONVar = JSON(responseData.result.value!)
@@ -35,22 +35,22 @@ class NewsTableViewController: UITableViewController {
             
                 print(Realm.Configuration.defaultConfiguration.fileURL ?? (AnyObject).self)
         
- 
+            }
+        }
     }
-*/
     // MARK: - Table view data source
 
-    func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return self.newsArray.count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cellId")!
         var dict = self.newsArray[(indexPath as NSIndexPath).row]
         cell.textLabel?.text = dict["title"] as? String
@@ -106,6 +106,6 @@ class NewsTableViewController: UITableViewController {
     }
     */
 
-        }
 }
+
 
