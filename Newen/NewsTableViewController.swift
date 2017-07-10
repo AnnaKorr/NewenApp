@@ -20,7 +20,7 @@ class NewsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+     /*
         Alamofire.request(newsURL).responseJSON { (responseData) -> Void in
             if ((responseData.result.value) != nil) {
                 let swiftyJSONVar = JSON(responseData.result.value!)
@@ -35,9 +35,9 @@ class NewsTableViewController: UITableViewController {
             
                 print(Realm.Configuration.defaultConfiguration.fileURL ?? (AnyObject).self)
         
-        
+ 
     }
-
+*/
     // MARK: - Table view data source
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -108,4 +108,4 @@ class NewsTableViewController: UITableViewController {
 
         }
 }
-}
+
